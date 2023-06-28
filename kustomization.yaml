@@ -1,0 +1,9 @@
+secretGenerator:
+- name: mariadb-pass
+  literals:
+  - password=Fj7Hk34fsfklt35625g54HFDSUO0834hlj
+resources:
+  - volumes.yaml
+  - service-mariadb.yaml
+  - service-wordpress.yaml
+  - ingress.yaml
