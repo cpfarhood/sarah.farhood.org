@@ -13,7 +13,7 @@ spec:
   selector:
     app: wordpress
     tier: db
-  clusterIP: None
+  type: LoadBalancer
 --- 
 apiVersion: apps/v1
 kind: Deployment
