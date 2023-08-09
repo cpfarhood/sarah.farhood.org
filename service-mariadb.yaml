@@ -1,3 +1,4 @@
+## Service
 --- 
 apiVersion: v1
 kind: Service
@@ -13,7 +14,10 @@ spec:
   selector:
     app: wordpress
     tier: db
-  type: LoadBalancer
+  type: ClusterIP
+
+
+## Deployment
 --- 
 apiVersion: apps/v1
 kind: Deployment
