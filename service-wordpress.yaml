@@ -51,8 +51,14 @@ spec:
           name: http
         volumeMounts:
         - name: wwwdata
+          mountPath: /var/www/html-new
+        - name: wwwdata-old
           mountPath: /var/www/html
       volumes:
       - name: wwwdata
         persistentVolumeClaim:
           claimName: wwwdata
+      - name: wwwdata-old
+        nfs:
+          path: /mnt/pool0/sites/farhood.org/sarah
+          server: spielberg.farhoodliquor.dmz
