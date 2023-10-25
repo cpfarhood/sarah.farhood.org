@@ -1,9 +1,9 @@
-secretGenerator:
-- name: mariadb-pass
-  literals:
-  - password=Fj7Hk34fsfklt35625g54HFDSUO0834hlj
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: sarah-farhood-org
 resources:
   - volumes.yaml
   - service-mariadb.yaml
   - service-wordpress.yaml
   - ingress.yaml
+  - sealedsecret-mariadb-pass.json
