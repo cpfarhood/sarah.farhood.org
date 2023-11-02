@@ -5,10 +5,12 @@ metadata:
   name: dbdata
   labels:
     name: dbdata
+  annotations:
+    kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: longhorn
+  storageClassName: rook-ceph-block-nvme
   resources:
     requests: 
       storage: 8Gi
@@ -25,7 +27,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteMany
-  storageClassName: longhorn
+  storageClassName: rook-ceph-block-nvme
   resources:
     requests: 
       storage: 128Gi
