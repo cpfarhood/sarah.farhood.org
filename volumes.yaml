@@ -5,12 +5,11 @@ metadata:
   name: dbdata
   labels:
     name: dbdata
-  annotations:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: rook-ceph-block-nvme
+  storageClassName: longhorn-perpetual
   resources:
     requests: 
       storage: 8Gi
@@ -22,12 +21,11 @@ metadata:
   namespace: sarah-farhood-org
   labels:
     name: wwwdata
-  annotations:
     kustomize.toolkit.fluxcd.io/prune: disabled
 spec:
   accessModes:
-  - ReadWriteOnce
-  storageClassName: rook-ceph-block-nvme
+  - ReadWriteMany
+  storageClassName: longhorn-perpetual
   resources:
     requests: 
       storage: 128Gi
