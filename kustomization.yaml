@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: sarah-farhood-org
 resources:
   - volumes.yaml
-  - mariadb.yaml
-  - wordpress.yaml
-  - ingress.yaml
+#  - mariadb.yaml
+#  - wordpress.yaml
+#  - ingress.yaml
   - sealedsecret-mariadb-pass.json
